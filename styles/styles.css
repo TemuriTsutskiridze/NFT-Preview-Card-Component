@@ -23,25 +23,63 @@ body {
 .img {
     max-width: 100%;
     height: 350px;
-    background-image: url("../assets/images/image-equilibrium.jpg");
+    background-image: url(../assets/images/image-equilibrium.jpg);
     background-repeat: no-repeat; 
     background-size: cover;  
     border-radius: 15px;
 }
 
+.bcColor {
+    width: 100%;
+    height: 100%;
+    background-color: #00FFF8;
+    border-radius: 8px;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+}
+
+.view {
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.img:hover .view {
+    opacity: 1;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.img:hover .bcColor{
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.5s ease;
+}
+
 .title {
     font-family: Outfit;
-    font-size: 36px;
-    font-weight: bold;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 28px; 
     color: white;
-    margin-top: 30px;
+    margin-top: 24px;
+    transition: 0.5s ease;
+}
+
+.title:hover {
+    color: #00FFF8;
+    cursor: pointer;
+    transition: 0.5s ease;
 }
 
 .txt {
     font-family: Outfit;
-    font-size: 20px;
-    font-weight: lighter;
-    color: white;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 26px;
+    color: #8BACD9;
     margin-top: 15px;
 }
 
@@ -50,7 +88,12 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 24px;
+    border-bottom: 1px solid #2E405A;
+}
+
+.eth, .time {
+    margin-bottom: 24px;
 }
 
 .eth, .time {
@@ -58,31 +101,62 @@ body {
     align-items: center;
 }
 
-.eth > img, .time > img {
-    margin-right: 10px;
+.eth > img{
+    margin-right: 6.5px;
 }
 
-.eth > p, .time > p {
-    color: white;
+.time > img{
+    margin-right: 9px;
+}
+
+.eth > p{
+    color: #00FFF8;
     font-family: "Outfit";
-    font-size: 15px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+}
+
+.time > p{
+    color: #8BACD9;
+    font-family: "Outfit";
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
 }
 
 .avatar {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 30px;
+    justify-content: flex-start;
+    margin-top: 16px;
 }
 
 .avatar > img {
-    width: 100px;
-    height: 100px;
+    width: 33px;
+    height: 33px;
+    margin-right: 16px;
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
 }
 
 .avatar > p {
-    color: white;
+    color: #8BACD9;
     font-family: "Outfit";
-    font-size: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.avatar > p > span {
+    color: #FFFFFF;
+    margin-left: 5px;
+    transition: 0.5s ease;
+}
+
+.avatar > p > span:hover {
+    color: #00FFF8;
+    cursor: pointer;
+    transition: 0.5s ease;
 }
